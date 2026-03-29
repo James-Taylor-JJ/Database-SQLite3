@@ -8,7 +8,7 @@
     select count(*) from albums
 
 -- Q3: Which genre has the most albums? (genre name and count)
-    select genre, count(*) as album_count from albums group by genre order by album_count desc limit 1
+    SELECT genres.name, COUNT (*) AS album_count FROM albums JOIN genres ON albums.genre_id = genres.id GROUP BY genres.name ORDER BY album_count DESC LIMIT 1;
 
 -- Q4: Album titles released before 1970, with artist name.
 
