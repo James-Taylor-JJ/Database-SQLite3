@@ -20,7 +20,7 @@
     SELECT albums.title, COUNT(*) AS track_count FROM tracks JOIN albums ON tracks.album_id = albums.id GROUP BY album_id ORDER BY track_count DESC
     SELECT albums.title, COUNT(tracks.id) AS track_count FROM albums JOIN tracks ON albums.id = tracks.album_id GROUP BY albums.title ORDER BY track_count DESC;
 -- Q7: Artists with more than one album.
-
+    SELECT artists.name, COUNT(albums.id) AS album_count FROM artists JOIN albums ON artists.id = albums.artist_id GROUP BY artists.name HAVING album_count > 1;
 
 -- Q8: Tracks longer than 5 minutes — track title, album title, artist name.
 
