@@ -2,7 +2,7 @@
 -- Fill in each query below.
 
 -- Q1: List every artist name and country, sorted alphabetically by name.
-
+    select * from artists order by name Asc
 
 -- Q2: How many albums are in the catalog?
 
