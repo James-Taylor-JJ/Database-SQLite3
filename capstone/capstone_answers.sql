@@ -5,10 +5,10 @@
     select * from artists order by name Asc
 
 -- Q2: How many albums are in the catalog?
-
+    select count(*) from albums
 
 -- Q3: Which genre has the most albums? (genre name and count)
-
+    select count (*) from genres
 
 -- Q4: Album titles released before 1970, with artist name.
 
