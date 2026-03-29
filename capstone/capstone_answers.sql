@@ -23,7 +23,7 @@
     SELECT artists.name, COUNT(albums.id) AS album_count FROM artists JOIN albums ON artists.id = albums.artist_id GROUP BY artists.name HAVING album_count > 1;
 
 -- Q8: Tracks longer than 5 minutes — track title, album title, artist name.
-
+    SELECT tracks.title, albums.title, artists.name FROM tracks JOIN albums ON tracks.album_id = albums.id JOIN artists ON albums.artist_id = artists.id WHERE tracks.duration_sec > 300;
 
 -- Q9: Average track duration per genre (in seconds, rounded to 1 decimal).
 
@@ -32,3 +32,4 @@
 
 
 -- BONUS: Per-album summary (title, artist, genre, track count, total minutes).
+    
