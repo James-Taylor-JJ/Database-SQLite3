@@ -29,7 +29,7 @@
     SELECT genres.name, ROUND(AVG(tracks.duration_sec), 1) AS avg_duration FROM tracks JOIN albums ON tracks.album_id = albums.id JOIN genres ON albums.genre_id = genres.id GROUP BY genres.name;
 
 -- Q10: Artist with the most total tracks — artist name and total count.
-
+    SELECT artists.name, COUNT(tracks.id) AS total_tracks FROM artists JOIN albums ON artists.id = albums.artist_id JOIN tracks ON albums.id = tracks.album_id GROUP BY artists.name ORDER BY total_tracks DESC LIMIT 1;
 
 -- BONUS: Per-album summary (title, artist, genre, track count, total minutes).
     
